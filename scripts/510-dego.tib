@@ -1,0 +1,43 @@
+select alan;
+go main;
+
+new room dego temple;
+new hatcher ceremonial incense;
+hatcher ceremonial incense interval is 4;
+hatcher ceremonial incense quantity is 2 to 4;
+room description is
+ The temple of Dego is a colossal structure of stone.
+ Carvings on the walls are a manifest of Gaia's history, as well as it's unravelled mysteries...
+;
+room has requirement character;
+
+new room dego bazaar;
+room has requirement character;
+
+new room dego port;
+room has requirement character;
+room has requirement ship;
+room is global;
+
+new room dego junkyard;
+room description is
+ The junkyard contains numerous shipwrecks and heaps of spare parts.
+;
+room has requirement character;
+
+go dego port;
+new room jungle biome;
+room description is
+ The land in front of you is untamed and covered with tangled vegetation.
+;
+room has requirement character;
+new pool jungle biome;
+room fertile jungle * is in pool jungle biome;
+room jungle biome curiosity is jungle biome;
+
+go dego port;
+new room gaia orbit;
+room has requirement ship;
+new pool gaia orbit;
+room space * is in pool gaia orbit;
+room gaia orbit curiosity is gaia orbit;

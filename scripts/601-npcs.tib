@@ -1,0 +1,27 @@
+select alan;
+go dego junkyard;
+new being ding;
+being has feature character;
+make 999999 emitter;
+trade 1 emitter for 1 pure water;
+make 999999 frigate hull;
+trade 1 frigate hull for 5 pure water;
+make 999999 hydrogen engine;
+trade 1 hydrogen engine for 3 pure water;
+repeat offers;
+
+select alan;
+go dego bazaar;
+new being morfy;
+being has feature character;
+make 999999 provisions;
+trade 1 provisions for 1 ceremonial incense;
+repeat offers;
+
+select alan;
+go dego bazaar;
+new being homer;
+being has feature character;
+make 999999 kapok hardwood;
+trade 5 kapok hardwood for 1 silicate mineral;
+repeat offers;

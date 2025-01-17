@@ -1,0 +1,14 @@
+select alan;
+go room prototypes;
+
+new room frigate *;
+room has requirement character;
+
+go being prototypes;
+
+new being frigate *;
+being has feature ship;
+
+room frigate * is in being frigate *;
+
+item frigate kit deploy is being frigate *;

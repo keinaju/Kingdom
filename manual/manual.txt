@@ -1,0 +1,200 @@
+KINGDOM GAME MANUAL
+
+Kingdom is an online text-adventure game with a procedurally generated open world.
+The players progress through the game by exploring the game world and trading items with others.
+
+All players are connected to a single game server.
+To start playing, you need a compatible client application.
+
+CLIENT APPLICATION SETUP
+
+Start the browser client at https://tib.up.railway.app
+
+Connect the client with the game server by typing the following command, and press enter:
+url https://kingdom.up.railway.app
+
+Sign up by typing:
+sign up <your username> <your password>
+
+Sign in by typing:
+sign in <your username> <your password>
+
+Test the connection by typing:
+ping
+
+If you get a response to the ping command, the client application is set up and you can start to play the game.
+
+SELECTING A BEING
+
+A user may have many playable characters which are called 'beings'.
+A user has always one being selected that can be changed at any time.
+
+To show details about your user, type:
+show user
+
+Read the response and select your initial being by typing:
+select <being name>
+
+If you would like to rename your initial being, type:
+being name is <being name>
+
+NAVIGATING IN THE GAME WORLD
+
+The game is an open world, composed from modules that are called 'rooms'.
+Each being in the game is located in one of these rooms.
+A room is connected to one or more of the other rooms.
+
+To show the current room of the selected being, type:
+show room
+
+This displays basic information about your surroundings, such as leads to other rooms, items in the room, and what other beings are present.
+
+To move to another room, type:
+go <room name>
+
+To take items from the room, type:
+take <item name>
+
+If you are playing the game for the first time, try to complete following tasks:
+1. Find a room called DEGO TEMPLE and move your being there.
+2. Take a look at what items are in the room, and pick them up.
+
+You can quick travel to any global rooms.
+This is a useful feature when you want to save time or you feel like being lost.
+To display all global rooms, type:
+show global rooms
+
+Some rooms have requirements for specific features.
+You can only access these rooms with a being that meets these features.
+To see the features of the current being, type:
+show being
+
+INVENTORY
+
+To display your inventory, type:
+show inventory
+
+Each being has two inventories: a free inventory and a trade inventory.
+The free inventory is used for anything but trading.
+When you start to trade, the items in question are automatically reserved for that purpose and moved to the trade inventory.
+
+TRADING ITEMS
+
+Your selected being can trade items with other beings.
+The game does not have traditional money.
+Instead, you trade items with other beings by typing:
+trade <number> <item name to sell> for <number> <item name to buy>
+If a matching offer is found in the current room, the transaction will be resolved and the items will be transferred between the beings.
+If a matching offer is not found, the items will be transferred to a trade inventory waiting for a matching offer.
+A transaction can be resolved only when the items and quantities in a new offer have to match an existing offer.
+
+For example, offers A and B will match:
+Offer A: [1] provisions for [2] ceremonial incense
+Offer B: [2] ceremonial incense for [1] provisions
+
+Another example, offers C and D will not match:
+Offer C: [1] provisions for [2] ceremonial incense
+Offer D: [1] ceremonial incense for [1] provisions
+
+Try to complete following tasks:
+1. Find a room called DEGO BAZAAR and move your being there.
+2. Read the offers in the room.
+3. Sell some ceremonial incenses for provisions.
+
+To give items to another being, type:
+give <number> <item name> to <being name>
+
+EXPLORING
+
+The game is a procedurally generated open world that uses a concept called 'curiosity'.
+When a player finds a room that contains a curiosity, it can be explored by typing:
+explore
+
+This will generate a new room that will be connected to the current room.
+
+Some curiosities have a fee item.
+You must have at least one piece of this item, which will be removed from the being's inventory when exploring.
+
+Try to complete following tasks:
+1. Find a room called JUNGLE BIOME and move your being there.
+2. Search the jungle until you find a room that has a curiosity. Pick up any items you find while doing this.
+3. Explore the room to generate an expansion room.
+
+ITEMS:
+
+To display all items in the game, type:
+show items
+
+To display details of an item, type:
+show item <item name>
+
+Some items are made of other items.
+In this case, you can break an item to receive it's components by typing:
+break <item name>
+
+To reverse the previous step, an item can be crafted by typing:
+craft <item name>
+
+DEPLOYING:
+
+Some items can be deployed to generate new beings.
+To deploy an item to a being, type:
+deploy <item name>
+
+Try to complete following tasks:
+1. Read FRIGATE KIT's description to see what it's made of.
+2. Acquire the components by crafting and trading in DEGO JUNKYARD.
+3. Craft FRIGATE KIT.
+4. Move to DEGO PORT and deploy the frigate.
+5. If you have some, give all of your SPACE PROBE -items to the frigate.
+6. Select the frigate and move to GAIA ORBIT.
+
+The frigate has an inside room.
+You can move other beings in there and then transport them to other places.
+
+HELP COMMAND
+
+For a complete list of game commands, type:
+help
+
+ADMIN COMMANDS
+
+If you want to establish your own game server, you need to provide the game data with admin commands:
+being has feature <feature name> => Adds a feature in the current being.
+default being is <being name> => Sets the default being of the game.
+delete being <being name> => Deletes a being.
+delete feature <feature name> => Deletes a feature.
+delete item <item name> => Deletes an item.
+delete pool <pool name> => Deletes a room pool.
+delete room <room name> => Deletes a room.
+feature <feature name> name is <feature name> => Renames a feature.
+game name is <game name> => Sets the game name.
+hatcher <item name> interval is <number> => Sets the interval for an item hatcher.
+hatcher <item name> quantity is <number> to <number> => Sets the quantities for an item hatcher.
+item <item name> deploy is being <being name> => Sets the deployment of an item to a being.
+item <item name> description is <description> => Sets the description of an item.
+item <item name> is made of <number> <item name> => Sets components in a craft plan.
+item <item name> name is <item name> => Renames an item.
+make <number> <item name> => Creates a stack of items in the current being's inventory.
+new being <being name> => Creates a new being.
+new feature <feature name> => Creates a new feature.
+new hatcher <item name> => Creates a new item hatcher.
+new item <item name> => Creates a new item.
+new pool <pool name> => Creates a new room pool.
+new room <room name> => Creates a new room and connects it to the current room.
+pool <pool name> description is <description> => Sets the description of a room pool.
+pool <item name> fee is <item name> => Sets the fee item of a room pool.
+pool <pool name> name is <pool name> => Renames a room pool.
+repeat offers => Sets all offers of the current being to repeat mode.
+room <room name> curiosity is <pool name> => Sets the curiosity of the current room.
+room <room name> is in being <being name> => Sets the inside room of a being.
+room <room name> is in pool <pool name> => Adds the current room in a room pool.
+room connection limit is <number> => Sets the connection limit of the current room.
+room description is <description> => Sets the description of the current room.
+room has requirement <feature name> => Sets a requirement for a feature in the current room.
+room is|is not global => Sets the global accessibility of the current room.
+room name is <room name> => Renames the current room.
+show features => Shows all features.
+show pool <pool name> => Shows details about a room pool.
+show pools => Shows all room pools.
+tick interval is <number> => Sets the tick interval of the game.

@@ -1,0 +1,59 @@
+new item ceremonial incense;
+item ceremonial incense description is
+ Incense can be employed to counteract disagreeable odours and drive away mosquitoes.
+ Native communities of Gaia used them extensively while offering prayer or divining oracles.
+;
+new item control system;
+new item dark matter;
+item dark matter description is
+ Dark matter is a form of matter that does not interact with light or other electromagnetic radiation.
+;
+new item emitter;
+new item frigate hull;
+new item frigate kit;
+item frigate kit description is
+ A frigate is a small spacecraft that can that can perform basic operations such as scouting.
+;
+new item herbs;
+new item hydrogen engine;
+new item hydrogen fuel;
+new item kapok hardwood;
+item kapok hardwood description is
+ A common building material in Gaia.
+;
+new item mango fruit;
+new item nickel ore;
+new item provisions;
+new item pure water;
+new item rubber;
+new item silicate mineral;
+item silicate mineral description is
+ Silicate minerals are rock-forming minerals made up of silicate groups.
+;
+new item space probe;
+item space probe description is
+ Space probe can be used to scout unknown regions of the outer space.
+;
+new item tea;
+new item tolu balsam;
+new item torch;
+new item white sap;
+item white sap description is
+ White sap is an emulsion of polymer microparticles in water.
+ It is found in nature, but synthetic variants are common as well.
+ The fluid can be used as an ingredient for rubber.
+;
+
+item ceremonial incense is made of 1 herbs;
+item ceremonial incense is made of 1 kapok hardwood;
+item control system is made of 1 emitter;
+item emitter is made of 1 silicate mineral;
+item frigate kit is made of 1 control system;
+item frigate kit is made of 1 frigate hull;
+item frigate kit is made of 1 hydrogen engine;
+item provisions is made of 1 mango fruit;
+item provisions is made of 1 pure water;
+item rubber is made of 1 white sap;
+item space probe is made of 1 emitter;
+item torch is made of 1 kapok hardwood;
+item torch is made of 1 white sap;

@@ -1,0 +1,67 @@
+select alan;
+
+go room prototypes;
+new room black star *;
+new hatcher dark matter;
+hatcher dark matter interval is 64;
+hatcher dark matter quantity is 1 to 1;
+room description is
+ A black star is a transitional phase between a collapsing star and a singularity. 
+ The star sustains a vacuum polarization, producing a form of degeneracy pressure preventing spacetime (and the particles held within it) from occupying the same space at the same time.
+;
+room has requirement ship;
+
+go room prototypes;
+new room c-asteroid *;
+new hatcher silicate mineral;
+hatcher silicate mineral interval is 4;
+hatcher silicate mineral quantity is 4 to 8;
+room description is
+ Chondrite-type asteroid is the most common type in the inner solar system.
+ It consists of clay and silicate rocks, and is dark in appearance.
+ They are among the most ancient objects in the solar system.
+ Many asteroids are the shattered remnants of planetesimals, bodies within the Red Star's solar nebula that never grew large enough to become planets.
+;
+room has requirement ship;
+
+go room prototypes;
+new room m-asteroid *;
+new hatcher nickel ore;
+hatcher nickel ore interval is 4;
+hatcher nickel ore quantity is 1 to 5;
+room description is
+ M-type asteroid is made up of nickel-iron.
+;
+room has requirement ship;
+
+go room prototypes;
+new room red dwarf *;
+room description is
+ A red dwarf is the smallest kind of star on the main sequence, and by far the most common type of fusing star in the galaxy.
+;
+room has requirement ship;
+
+go room prototypes;
+new room space *;
+room description is
+ Outer space is the closest known approximation to a perfect vacuum.
+ It has effectively no friction, allowing stars, planets, and moons to move freely along their ideal orbits.
+ The size of the whole universe is unknown, and it might be infinite in extent.
+;
+room has requirement ship;
+
+new pool space;
+pool space description is
+ The space around you is unknown.
+ You could send a probe to discover a new location.
+;
+pool space fee is space probe;
+room black star * is in pool space;
+room c-asteroid * is in pool space;
+room m-asteroid * is in pool space;
+room space * is in pool space;
+room red dwarf * is in pool space;
+
+room space * curiosity is space;
+room black star * curiosity is space;
+room red dwarf * curiosity is space;

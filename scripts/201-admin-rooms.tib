@@ -1,0 +1,20 @@
+select alan;
+go main;
+room description is
+ Welcome to Kingdom -game!
+;
+room has requirement character;
+
+new room admin room;
+room has requirement admin;
+
+new room room prototypes;
+go admin room;
+
+new room being prototypes;
+
+new being nomad *;
+being has feature character;
+default being is nomad *;
+
+go admin room;

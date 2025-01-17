@@ -1,0 +1,94 @@
+select alan;
+
+go room prototypes;
+new room fertile jungle *;
+new hatcher kapok hardwood;
+hatcher kapok hardwood interval is 2;
+hatcher kapok hardwood quantity is 2 to 4;
+new hatcher herbs;
+hatcher herbs interval is 2;
+hatcher herbs quantity is 1 to 3;
+new hatcher mango fruit;
+hatcher mango fruit interval is 1;
+hatcher mango fruit quantity is 3 to 5;
+room has requirement character;
+room description is
+ Massive century-old kapok trees surround you.
+ Indigenous communities of the forest believe that the kapok tree is the mother of all animals.
+ The forest here is warm, humid and bountiful with life.
+;
+
+go room prototypes;
+new room creek *;
+new hatcher pure water;
+hatcher pure water quantity is 5 to 5;
+room description is
+ The creek is said to lead to the heart of the forest.
+;
+room has requirement character;
+
+go room prototypes;
+new room deep jungle *;
+new hatcher white sap;
+hatcher white sap interval is 2;
+hatcher white sap quantity is 1 to 2;
+room description is
+ The vines around you are thicker, and the forest is darker than before.
+ Nooks and crannies formed in the roots appear menacing.
+;
+room has requirement character;
+
+go room prototypes;
+new room hollow kapok *;
+new hatcher kapok hardwood;
+hatcher kapok hardwood interval is 2;
+hatcher kapok hardwood quantity is 2 to 4;
+room connection limit is 2;
+room description is
+ You are inside an old hollow kapok tree.
+;
+room has requirement character;
+
+go room prototypes;
+new room swamp *;
+new hatcher tolu balsam;
+hatcher tolu balsam interval is 1;
+hatcher tolu balsam quantity is 2 to 4;
+room has requirement character;
+
+go room prototypes;
+new room upper kapok cave *;
+room has requirement character;
+
+new pool fertile jungle;
+pool fertile jungle description is
+ Mosquitoes are swarming around you.
+ A repellent of some sort could drive them away.
+;
+pool fertile jungle fee is ceremonial incense;
+room creek * is in pool fertile jungle;
+room fertile jungle * curiosity is fertile jungle;
+
+new pool creek;
+room fertile jungle * is in pool creek;
+room deep jungle * is in pool creek;
+room creek * curiosity is creek;
+
+new pool deep jungle;
+pool deep jungle description is
+ You are deep in the jungle. You will need more supplies to go forth.
+;
+pool deep jungle fee is provisions;
+room creek * is in pool deep jungle;
+room hollow kapok * is in pool deep jungle;
+room swamp * is in pool deep jungle;
+room deep jungle * curiosity is deep jungle;
+
+new pool hollow kapok;
+pool hollow kapok description is
+ Room inside the tree is dark.
+ You will need to produce light to see what's inside.
+;
+pool hollow kapok fee is torch;
+room upper kapok cave * is in pool hollow kapok;
+room hollow kapok * curiosity is hollow kapok;
